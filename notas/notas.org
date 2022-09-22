@@ -66,6 +66,8 @@ Podemos interpretarlo como una linea de ensamble dentro del procesador en la que
 #
 
 
+
+
 * Practica 3
 ** Ejercicio 1
 dec -> bin

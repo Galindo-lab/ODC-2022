@@ -65,6 +65,7 @@
 #+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
 
 #+macro: lstlisting  @@latex:\lstinputlisting{$1}@@
+#+macro: code  @@latex:\\ \lstinputlisting{$1}@@
 
 #+BEGIN_EXPORT latex
 

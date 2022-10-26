@@ -1,4 +1,4 @@
-% Created 2022-10-21 vie 08:23
+% Created 2022-10-25 mar 21:02
 % Intended LaTeX compiler: pdflatex
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
@@ -113,19 +113,19 @@ literate={á}{{\'a}}1
 \maketitle
 
 \section*{Objetivo}
-\label{sec:orgbb8453b}
+\label{sec:org31b68e0}
 Seleccionar las instrucciones de control de flujo del programa adecuadas, para
 desarrollar aplicaciones de sistemas basados en microp
 
 \section*{Desarrollo}
-\label{sec:org0966e07}
+\label{sec:orgca0430b}
 Programe las siguientes rutinas usando las instrucciones de control de flujo del
 procesador 80386 y las rutinas en la biblioteca de funciones libpc\_io.a. Escriba su
 código fuente en un archivo llamado P8.asm, ensamble el código con NASM y
 encadénelo con el comando ld.
 
 \subsection*{a) gets}
-\label{sec:org6352f41}
+\label{sec:org19494f9}
 Almacena en memoria una cadena de caracteres ingresada por el usuario por medio
 del teclado. La captura termina cuando el usuario presiona la tecla ENTER. La 
 cadena se almacena a partir de la dirección EDX y con un 0 (null) al final que 
@@ -143,12 +143,12 @@ se verifica si se recibió un ENTER ó BACKSPACE, para proceder a terminar la
 captura o hacer el borrado del último carácter ingresado.
 
 \subsection*{b) getsAlpha}
-\label{sec:org37636fe}
+\label{sec:orge34ba3d}
 El procedimiento es similar a gets, a excepción de que sólo acepta caracteres
 del abecedario a – z y A – Z.
 
 \subsection*{c) asteriscos}
-\label{sec:org1c89f5a}
+\label{sec:org595665a}
 Colocar en CX la cantidad de renglones con asteriscos se desean imprimir. El
 procedimiento imprime las líneas con asteriscos. La primera línea cuenta con 
 1 asterisco, la segunda con 2, etc. Ejemplo: Si CX = 5 el procedimiento debe 
@@ -161,4 +161,23 @@ imprimir:
 ****
 *****
 \end{verbatim}
+
+
+
+
+\section*{Capturas}
+\label{sec:orga2968c0}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=10cm]{img/1.png}
+\caption{Programa funcionando}
+\end{figure}
+
+\section*{Código}
+\label{sec:orgf3426a7}
+\\ \lstinputlisting{./src/P9.asm}
+
+\section*{Comentarios}
+\label{sec:org185f25b}
+Capturar cosas con asembly no es facil, pero es un desafio interesante.
 \end{document}

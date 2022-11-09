@@ -1,6 +1,6 @@
 
 FILE = P10
-INCLUDES = # ./lib/libpc_io.a
+INCLUDES = ./lib/libpc_io.a
 
 create:
 	nasm -f elf ${FILE}.asm	

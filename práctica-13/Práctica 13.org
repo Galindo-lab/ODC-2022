@@ -1,0 +1,12 @@
+
+#+TITLE:  Acceso a subrutinas de ensamblador por programas de alto nivel
+#+AUTHOR: Luis Eduardo Galindo Amaya (1274895)
+#+DATE:   25-11-2022
+
+#+MACRO:  tagline  Práctica 13
+#+INCLUDE: "../includes/template.org"
+#+OPTIONS: ^:nil
+
+* Objetivo
+Desarrollar subrutinas de lenguaje ensamblador para ser llamadas desde un lenguaje de alto nivel para comprender las convenciones que los compiladores trabajan en sistemas basados en microprocesador.
+

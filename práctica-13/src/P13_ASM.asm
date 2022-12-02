@@ -1,3 +1,6 @@
+;; AUTHOR: Luis Eduardo Galindo Amaya
+;;   DATE: 25-11-2022
+   
 section .data
 
 section .bss
@@ -6,53 +9,60 @@ section .text
 global sumaMatrices:
 
 sumaMatrices:
+    ;guardar el stack pointer y el stack frame    
     push ebp
     mov ebp, esp
-    
-	push EBX
-	push EDI
-	push ESI
 
-    ;[ebp+8]                    ;a
-    ;[ebp+12]                   ;b
-    ;[ebp+16]                   ;c
-    
-    ;[ebp+20]                   ;columnas
-    ;[ebp+24]                   ;filas
+    ;guardar los valores de los punteros de memoria
+	push ebx
+	push edi
+	push esi
 
-    mov eax, [ebp+20]           ;columnas
-    mov ecx, [ebp+24]           ;filas
+    ;variables respecto EBP
+    ;  +8:  a        
+    ; +12:  b        
+    ; +16:  c        
+    ; +20:  Filas    
+    ; +24:  Columnas 
+
+    mov eax, [ebp+24]           ;columnas      jmp
+    mov ecx, [ebp+20]           ;filas
+
+    ;calcular el numero de elemntos en la matriz
+    
     mul ecx                     ;EDX:EAX = EAX*ECX
-    mov edx, eax                ;guardar bits menos signi.
-    
+    mov edx, eax                ;edx = bits menos significativos
+
     mov ecx, edx
     mov esi, [ebp+16]           ;matriz c
     
-    mov eax, [ebp+8]            ;matriz a
+    mov eax, [ebp+8]            ;matriz a    
     mov edi, 0                  ;iterador
 
-.sumar_A:
+.sumar_A:                       ;-------------------------------
     mov ebx, [eax+edi*4]
     add [esi+edi*4], ebx
     inc edi
     loop .sumar_A
 
-    mov ecx, edx
-    mov eax, [ebp+12]            ;matriz b
-    mov edi, 0                   ;iterador
+    mov ecx, edx                ;reinicia el loop 
+    mov eax, [ebp+12]           ;matriz b
+    mov edi, 0                  ;iterador
     
-.sumar_B:
+.sumar_B:                       ;-------------------------------
     mov ebx, [eax+edi*4]
     add [esi+edi*4], ebx
     inc edi
     loop .sumar_B
-    
+
+    ;restaurar los valores de los registros
     pop ESI
 	pop EDI
 	pop EBX
 
+    ;restaurar el stack pointer y el stack frame
 	mov esp, ebp
-	pop EBP
+	pop ebp
 	ret
 
     

@@ -1,4 +1,4 @@
-% Created 2022-11-08 mar 21:13
+% Created 2022-11-09 mié 11:36
 % Intended LaTeX compiler: pdflatex
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
@@ -113,15 +113,15 @@ literate={á}{{\'a}}1
 \maketitle
 
 \section*{Objetivo}
-\label{sec:orgc2f40cb}
+\label{sec:orgbd4fac0}
 Seleccionar las instrucciones de llamadas al sistema adecuadas, para 
 desarrollar aplicaciones de sistemas basados en microprocesador, 
 mediante el análisis de su funcionalidad, de forma responsable y eficiente.
 
 \section*{Desarollo}
-\label{sec:org566af73}
+\label{sec:org7ccdc2f}
 \subsection*{Actvidad 1}
-\label{sec:org62f16ce}
+\label{sec:orge9d07a3}
 Completar la tabla sobre los parámetros necesarios en las llamadas al
 sistema operativo para el manejo de archivos en Linux por medio de la 
 interrupción 80h.
@@ -147,10 +147,10 @@ Abrir & EBX = path & Dir. de una cadena de caracteres\\
  & EDX = permisos & Permisos al archivo\\
 \hline
 \end{tabular}
-\end{center}\footnotetext[1]{\label{orgbf97686}al terminar el servicio el valor se reemmplaza con el numero de caracteres capturados}\footnotetext[2]{\label{org1a72989}0: Entrada estándar o teclado.}\footnotetext[3]{\label{org5f398c0}1: salida estándar o terminal.}\footnotetext[4]{\label{org68a90d6}Más informacion: \url{https://es.wikipedia.org/wiki/Int\_80h}}
+\end{center}\footnotetext[1]{\label{orgde44e8b}al terminar el servicio el valor se reemmplaza con el numero de caracteres capturados}\footnotetext[2]{\label{org98a730b}0: Entrada estándar o teclado.}\footnotetext[3]{\label{orge08a8aa}1: salida estándar o terminal.}\footnotetext[4]{\label{org1192bcc}Más informacion: \url{https://es.wikipedia.org/wiki/Int\_80h}}
 
 \subsection*{Actividad 2}
-\label{sec:org698e968}
+\label{sec:orgf153df1}
 Codifique las funciones gets y puts las cuales capturan e imprimen una 
 cadena de caracteres en pantalla, respectivamente. Solo haga uso de la 
 interrupción 80h. No haga uso de la librería proporcionada.
@@ -162,7 +162,7 @@ interrupción 80h. No haga uso de la librería proporcionada.
 \end{description}
 
 \subsection*{Actividad 3}
-\label{sec:org7f96cff}
+\label{sec:org42bb9d7}
 Cree un archivo dentro de la misma carpeta, llamado P10.txt. Dentro de
 este archivo, coloque su nombre y su matrícula. Desarrolle una subrutina
 que le permita leer el contenido del archivo e imprimirlo en pantalla
@@ -170,25 +170,29 @@ utilizando la interrupción 80h. Mencione que datos se deben colocar en
 cada registro para lograr esto. 
 
 \section*{Captura}
-\label{sec:orga09ddd2}
+\label{sec:orgd612cb4}
 \begin{center}
 \includegraphics[width=.9\linewidth]{img/a.png}
 \end{center}
 
 \section*{Conclusiones}
-\label{sec:orgcfa519c}
+\label{sec:org0691a3a}
 Cuando trabajamos con interrupciones lo principal cosa que debemos tomar en cuenta
 es que cada sistema operativo es diferente, por lo que nuestro código va a tener
 que modificarse de acuerdo a cada sistema operativo lo cual añade una capa mas
 a las complicaciones que requiere el ensamblador para funcionar.
 
 \section*{Dificultades}
-\label{sec:org985d790}
+\label{sec:org7bad91b}
 Con la interrupción de captura tuve que añadir una funcion para vaciar el 
 buffer, ya que pasaba los valores a la siguiente captura.
 
+\section*{Código}
+\label{sec:org49f55d7}
+\\ \lstinputlisting{./src/P10.asm}
+
 \section*{Fuentes}
-\label{sec:orgb7dcc6d}
+\label{sec:orgb2dad22}
 \begin{description}
 \item[{Lista de interrupciones}] \url{https://es.wikipedia.org/wiki/Int\_80h}
 \item[{Descripciones de las interrupciones}] \url{http://www.int80h.org/}
@@ -197,8 +201,4 @@ buffer, ya que pasaba los valores a la siguiente captura.
 \item[{Generalidades de NASM}] \url{https://shorturl.at/lsuHS}
 \item[{Direccion en un arreglo}] \url{https://reverseengineering.stackexchange.com/a/18711}
 \end{description}
-
-\section*{Código}
-\label{sec:orgb0d06d2}
-\\ \lstinputlisting{./src/P10.asm}
 \end{document}

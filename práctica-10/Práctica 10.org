@@ -71,6 +71,9 @@ a las complicaciones que requiere el ensamblador para funcionar.
 Con la interrupción de captura tuve que añadir una funcion para vaciar el 
 buffer, ya que pasaba los valores a la siguiente captura.
 
+* Código
+{{{code(./src/P10.asm)}}}
+
 * Fuentes
 - Lista de interrupciones :: https://es.wikipedia.org/wiki/Int_80h
 - Descripciones de las interrupciones :: http://www.int80h.org/
@@ -81,6 +84,3 @@ buffer, ya que pasaba los valores a la siguiente captura.
 
 # - Generalidades de NASM :: http://cv.uoc.edu/annotation/8255a8c320f60c2bfd6c9f2ce11b2e7f/619469/PID_00218273/PID_00218273.html#w31aac15c19c53
 # https://stackoverflow.com/questions/49784186/segmentation-fault-int-80h
-
-* Código
-{{{code(./src/P10.asm)}}}

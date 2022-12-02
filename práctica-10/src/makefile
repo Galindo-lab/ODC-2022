@@ -12,3 +12,6 @@ clean:
 
 test:
 	./${FILE}.out
+
+decompile:
+	objdump -d ${FILE}.o > ${FILE}.dump
